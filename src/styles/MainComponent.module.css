@@ -1,0 +1,172 @@
+.MainComponent {
+    padding-top: var(--wrapper);
+    width: calc(100vw - var(--wrapper) * 2);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.MainComponent > * {
+    margin-bottom: 20px;
+}
+
+
+.MainComponent > h5 {
+    color: var(--orange);
+    letter-spacing: 1px;
+}
+
+.MainComponent > h2 {
+    font-size: 30px;
+}
+
+.MainComponent > p {
+    color: var(--dark-garyish-blue);
+    line-height: 1.6;
+}
+
+.MainComponent > :last-child {
+    width: 100%;
+}
+
+.MainComponent > :last-child > * {
+    margin-bottom: 20px;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    /*height: 50px;*/
+}
+
+.prices > :last-child {
+    margin-left: auto;
+    color: var(--garyish-blue);
+    text-decoration: line-through;
+}
+
+.prices > :first-child {
+    font-weight: 700;
+    font-size: 25px;
+
+}
+
+.prices > :nth-child(2) {
+    margin-left: var(--wrapper);
+    color: var(--orange);
+    font-weight: 700;
+    background-color: hsla(26, 100%, 55%, .2);
+    padding: 2px 6px;
+    border-radius: 5px;
+}
+
+
+.inDeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    background-color: var(--light-garyish-blue);
+    padding-inline: var(--wrapper);
+    border-radius: 8px;
+}
+
+.inDeBtn > button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.inDeBtn > p {
+    font-weight: 700;
+}
+
+.addToCartBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: var(--orange);
+    border-radius: 8px;
+    gap: 15px;
+    width: inherit;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+}
+
+@media (hover: hover) {
+
+    .addToCartBtn:hover {
+        background-color: hsla(26, 100%, 55%,0.5);
+        box-shadow: 0 10px 30px 0 hsla(26, 100%, 55%,0.5);
+    }
+
+
+
+}
+
+@media (min-width: 1280px) {
+
+
+
+    .MainComponent {
+        width: 450px;
+        height: 450px;
+        transform: none;
+        position: static;
+
+    }
+
+    .MainComponent h2 {
+        width: 20ch;
+    }
+
+    .MainComponent > * {
+        margin-bottom: 25px;
+    }
+
+    .MainComponent > :last-child {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .MainComponent > :last-child div {
+        width: 35%;
+    }
+
+
+
+    .MainComponent > :last-child > button {
+        width: 60% ;
+    }
+
+    .prices {
+        display: block;
+    }
+
+    .prices > :first-child {
+        width: fit-content;
+        display: inline-block;
+    }
+
+    .prices > :nth-child(2) {
+        display: inline-block;
+        width: 45px;
+        transform: translateY(-3px);
+        margin-left: 15px;
+    }
+
+    .inDeBtn {
+        padding-inline: 20px;
+        justify-content: space-between;
+    }
+
+    .inDeBtn :first-child {
+        transform: translateY(-2px);
+    }
+
+
+}

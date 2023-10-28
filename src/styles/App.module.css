@@ -1,0 +1,54 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kumbh+Sans:wght@400;700&family=Manrope:wght@800&family=Open+Sans:wght@400;700&family=PT+Sans&family=Raleway:wght@400;700&family=Rubik:wght@300;400;500&display=swap');
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', serif;
+}
+
+
+:root {
+
+    --orange: hsl(26, 100%, 55%);
+    --pale-orange: hsl(25, 100%, 94%);
+    --very-dark-blue: hsl(220, 13%, 13%);
+    --dark-garyish-blue: hsl(219, 9%, 45%);
+    --garyish-blue: hsl(220, 14%, 75%);
+    --light-garyish-blue: hsl(223, 64%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --black-light-box: hsla(0, 0%, 0%, 0.75);
+    --wrapper: 30px;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+@media (min-width: 1280px) {
+
+    .App {
+        position: relative;
+    }
+
+    .App > div {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        gap: 80px;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+}
+
+
+
+

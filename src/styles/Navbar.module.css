@@ -1,0 +1,140 @@
+nav {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 202;
+    background-color: var(--white);
+}
+
+
+nav > * {
+    margin-inline: 10px;
+}
+
+nav > *:nth-child(2) {
+
+    font-size: 32px;
+    transform: translateY(-4px);
+
+}
+
+nav > *:nth-child(4) {
+    margin-left: auto;
+}
+
+.profileImage {
+    width: 25px;
+}
+
+.navigationContainer {
+    display: none;
+    position: relative;
+}
+
+
+nav > :nth-child(4) > p {
+    position: absolute;
+    color: var(--white);
+    background-color: var(--orange);
+    width: 18px;
+    text-align: center;
+    font-size: 10px;
+    top: 13px;
+    right: 60px;
+    border-radius: 50vh;
+}
+
+@media (hover: hover) {
+
+
+    .profileImage:hover {
+        border: 2px solid var(--orange);
+        border-radius: 50vh;
+        cursor: pointer;
+    }
+
+    .navigationContainer > button:hover {
+        color: var(--black);
+    }
+
+    .navigationContainer > button:hover::after  {
+
+        content: "";
+        background-color: var(--orange);
+        width: var(--width,50px);
+        height: 5px;
+        position: absolute;
+        bottom: -35px;
+        left: var(--left,0);
+
+    }
+
+}
+
+
+@media (min-width: 1280px) {
+
+    nav {
+        padding: 25px 200px;
+    }
+
+    nav > *:not(:nth-child(4)) {
+        margin-inline: 20px;
+        cursor: pointer;
+    }
+
+    nav > :nth-child(4) > img {
+        cursor: pointer;
+    }
+
+
+    nav::after {
+        content: '';
+        width: calc(100vw - 400px);
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.1);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    nav > :first-child {
+        display: none;
+    }
+
+    .navigationContainer {
+        display: block;
+    }
+
+    .navigationContainer > * {
+        margin-inline: 15px;
+    }
+
+    .navigationContainer > button {
+        background: none;
+        border: none;
+        color: var(--dark-garyish-blue);
+    }
+
+
+    .profileImage {
+        width: 30px;
+    }
+
+    nav > *:nth-child(4) {
+        position: relative;
+    }
+
+
+    nav > :nth-child(4) > p {
+
+        top: -4px;
+        right: -6px;
+
+    }
+
+}
